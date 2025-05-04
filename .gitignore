@@ -1,0 +1,17 @@
+.env*
+server/.env*
+client/.env*
+
+server/dist/
+client/dist/
+
+
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
