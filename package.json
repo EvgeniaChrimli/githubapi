@@ -4,10 +4,12 @@
   "scripts": {
     "install": "cd app && npm install && cd ../server && npm install",
     "build": "npm run build:app && npm run build:server",
-    "build:client": "cd app && npm run build",
-    "build:server": "cd app && npm run build",
-    "start": "cd app && npm start",
-    "dev": "concurrently \"cd app && npm run dev\" \"cd app && npm run dev\""
+    "build:app": "cd app && npm run build",
+    "build:server": "cd server && npm run build",
+    "dev": "concurrently \"cd app && npm run dev\" \"cd server && npm run dev\"",
+    "start": "npm run build && npm run start:app && npm run start:server",
+    "start:app": "cd app && npm run start",
+    "start:server": "cd server && npm start"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
