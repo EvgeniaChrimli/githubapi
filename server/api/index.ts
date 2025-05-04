@@ -1,7 +1,6 @@
 import app from "../proxy";
-import { createServer } from "http";
+import serverless from "serverless-http";
 
-export default function handler(req: any, res: any) {
-  const server = createServer(app);
-  server.emit("request", req, res);
-}
+const handler = serverless(app);
+
+export default handler;
